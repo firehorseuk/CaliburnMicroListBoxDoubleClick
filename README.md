@@ -26,7 +26,7 @@ Caliburn.Micro does an awesome job handling messages on events but WPF has certa
 
 So let’s start out with a very simple example. I will create a view here with just two listboxes. Nothing sneaky here, just two plain ol’ ListBox objects….one is the HereList and one is the ThereList.
 
-image
+<img src="https://github.com/firehorseuk/CaliburnMicroListBoxDoubleClick/blob/master/CaliburnMicroListBoxDoubleClick/CaliburnMicroListBoxDoubleClickScreen.png">
 
 Now I would like to populate the HereList with a list of objects and allow my user to double click on any given object. Once the double click event occurs then that object is magically transported over to the ThereList. Pretty simple right? Except that the ListBox control doesn’t really have a nice way to allow you to use Caliburn.Micro’s Message.Attach to the objects without totally hosing things up. The reason why is that when you try to attach a message to an object within the ListBox it is done so at the context of the actual object level. So if I have a ObservableCollection<Person> attached to my HereList control…. then it will try to locate the Person.MoveTheStuffOverToTheOtherBoxCommand which more often than not does’t exist.  🙁
 
@@ -176,7 +176,7 @@ Now we can add in an ItemContainerStyle to take care of setting each of the List
  
 Now each of our items will call back to the appropriate ViewModel function and pass along the $dataContext which in this instance is just a Person object. And we now have the intended functionality!
 
-
+<img src="https://github.com/firehorseuk/CaliburnMicroListBoxDoubleClick/blob/master/CaliburnMicroListBoxDoubleClick/CaliburnMicroListBoxDoubleClickCompleted.png">
 
 And here’s the completed project for you to peruse
 
