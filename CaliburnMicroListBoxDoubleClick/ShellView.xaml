@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CaliburnMicroListBoxDoubleClick"
         xmlns:cal="http://www.caliburnproject.org"
         mc:Ignorable="d"
-        Title="ShellView" Height="450" Width="800">
+        Title="ShellView" Height="350" Width="600">
     <Grid>
         <ListBox x:Name="HereList" Height="233" HorizontalAlignment="Left" 
                  Margin="50,50,0,0"  VerticalAlignment="Top" Width="173">
@@ -68,5 +68,7 @@
                 </Style>
             </ListBox.ItemContainerStyle>
         </ListBox>
+        <Label Content="HereList" HorizontalAlignment="Left" Margin="97,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="ThereList" HorizontalAlignment="Left" Margin="426,10,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
